@@ -4,7 +4,6 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
   selector: 'app-input-button-unit',
   template: `
 
-
     <input class="todo-input"
        #inputElementRef
        [value]="title"
