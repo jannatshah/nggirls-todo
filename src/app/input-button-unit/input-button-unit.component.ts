@@ -18,6 +18,14 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class InputButtonUnitComponent implements OnInit {
   title = 'What\'s on the agenda?';
+  @Output()
+  private _submit: EventEmitter<string> = new EventEmitter();
+  public get submit(): EventEmitter<string> {
+    return this._submit;
+  }
+  public set submit(value: EventEmitter<string>) {
+    this._submit = value;
+  }
 
   constructor() { }
 
@@ -29,5 +37,4 @@ export class InputButtonUnitComponent implements OnInit {
   }
 
   // tslint:disable-next-line: no-output-native
-  @Output() submit: EventEmitter<string> = new EventEmitter();
 }
